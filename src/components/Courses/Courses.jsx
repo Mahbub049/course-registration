@@ -13,7 +13,7 @@ const Courses = ({courseCart, creditHour, TotalAmount}) => {
     },[])
 
     return (
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 lg:grid-cols-3">
             {
                 courses.map((course, idx)=><Course key={idx} course={course} creditHour={creditHour} courseCart={courseCart} TotalAmount={TotalAmount}></Course>
                 )

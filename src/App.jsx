@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <div className='flex mx-auto container gap-6'>
+      <div className='lg:flex mx-auto container gap-6'>
         <Courses courseCart={courseCart} creditHour={creditHour} TotalAmount={TotalAmount}></Courses>
         <Cart credit={credit} amount={amount} courseList={courseList}></Cart>
       </div>

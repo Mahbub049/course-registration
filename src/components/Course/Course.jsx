@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Course = ({course, courseCart, creditHour, TotalAmount}) => {
     const {photo, name, description, credit, price} = course;
     return (
-        <>
+        <div className="mx-auto">
             <div className="w-96 bg-base-100 shadow-xl">
             <figure className="px-6 pt-10 w-full">
                 <img src={photo} alt="Shoes" className="rounded-xl w-full" />
@@ -28,7 +28,7 @@ const Course = ({course, courseCart, creditHour, TotalAmount}) => {
                 </div>
             </div>
             </div>
-        </>
+        </div>
     );
 };
 
