@@ -1,7 +1,8 @@
 import { FaDollarSign } from "react-icons/fa6";
 import { BsBook } from "react-icons/bs";
+import PropTypes from 'prop-types';
 
-const Course = ({course}) => {
+const Course = ({course, courseCart, creditHour, TotalAmount}) => {
     const {photo, name, description, credit, price} = course;
     return (
         <>
@@ -23,12 +24,19 @@ const Course = ({course}) => {
                     </div>
                 </div>
                 <div className="card-actions">
-                <button className="btn bg-[#2F80ED] text-lg font-semibold text-white w-full">Buy Now</button>
+                <button onClick={()=>{courseCart(name), creditHour(credit), TotalAmount(price)}} className="btn bg-[#2F80ED] text-lg font-semibold text-white w-full">Buy Now</button>
                 </div>
             </div>
             </div>
         </>
     );
 };
+
+Course.propTypes = {
+    course: PropTypes.object.isRequired,
+    courseCart: PropTypes.func,
+    creditHour: PropTypes.func,
+    TotalAmount: PropTypes.func
+}
 
 export default Course;
